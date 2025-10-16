@@ -1,0 +1,19 @@
+name: Install Python
+on:
+ push:
+  branches: [main]
+ workflow_dispatch:
+jobs:
+ setup-python:
+  runs-on: ubuntu-latest
+  steps:
+   - name: checkout code
+     uses: actions/checkout@v4
+   - name: Install Python
+     uses: actions/setup-python@v5
+     with:
+      python-version: '3.11'
+   - name: Verify Python installation
+     run: |
+      python --version
+      pip --version
