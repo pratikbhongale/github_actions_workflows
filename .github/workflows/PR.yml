@@ -1,5 +1,7 @@
 name: CICD pipeline for PR and Cron_jobs
 on:
+ schedule:
+  - cron: "*/1 * * * *"
  push:
   branches: [main]
  pull_request:
