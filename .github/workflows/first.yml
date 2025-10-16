@@ -11,11 +11,5 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20 '  # specify the Node.js version you need
-
-      - name: Install Dependencies
-        run: npm install
+      - name: Say Hello to check the github workflow
+        run: echo "Github Actions is working........"
