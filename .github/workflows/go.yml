@@ -1,6 +1,9 @@
 name: GO CI
-on: [push, pull_request]
-branches: [feature]
+on:
+ push:
+  branches: [feature]
+ pull_request:
+  branches: [feature]
 jobs:
  build:
   runs-on: ubuntu-latest
